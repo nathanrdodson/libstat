@@ -1,3 +1,0 @@
-fn traverse_dirs() {
-	
-}
