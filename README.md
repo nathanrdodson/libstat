@@ -1,33 +1,46 @@
 # media-dj
 
-media-dj comes from dissatisfaction with Tdarr's closed source nature, and an admittedly horrifying UI. I am hoping this will become a viable (completely open-source) alternative written in Rust, with many additional extra features. This is also serving as a way to expand my knowledge of the Rust language.
+media-dj comes from dissatisfaction with Tdarr's closed source nature, and horrifying UI. I am hoping this will become a viable (completely open-source) alternative written in Rust, with many additional extra features. Note, this project is also serving as a way to expand my knowledge of the Rust language.
 
 ## Development
 
+### Backend
+
 1. Make sure you have a [Rust installation](https://www.rust-lang.org/tools/install)
 
-   - for WSL (Ubuntu 22.04):
+#### for WSL (Ubuntu 22.04), macOS (14.5), *nix
 
-   `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Grab it: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Select default installation: `1` or `return`
+- *Restart current shell*
+- Test installation with: `rustc --version`
+- *My environment is*
 
-   - Select default installation: `1`
-   - Restart current shell
-   - Test installation with
+```shell
+rustc 1.80.1 (3f5fd8dd4 2024-08-06)
+```
 
-   `rustc --version`
+- Start backend server with:
+- ``
 
-   > **Note** -- I am using [Bun](https://bun.sh/docs/installation) as my preferred Javascript toolkit
+### Frontend
 
-2. Install front-end dependencies
+> [!NOTE]
+> I am using [Bun](https://bun.sh/docs/installation) as my preferred Javascript toolkit and in the following documentation.
+
+- Install front-end dependencies
 
    `cd media-dj-fe && bun install`
 
-3. Install development database (for `macos`)
-   `brew tap mongodb/brew`
+### Database
 
-   `brew install mongodb-community`
+- Install development database (using [Homebrew](https://brew.sh/) for `macos`)
 
-   `brew services start mongodb/brew/mongodb-community`
+- `brew tap mongodb/brew`
+
+- `brew install mongodb-community`
+
+- `brew services start mongodb/brew/mongodb-community`
 
 ## Feature Implementations
 
